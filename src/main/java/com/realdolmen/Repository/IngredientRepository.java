@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Stateless
-public class IngredientRepository {
+public class    IngredientRepository {
 
 	@PersistenceContext
 	EntityManager em;

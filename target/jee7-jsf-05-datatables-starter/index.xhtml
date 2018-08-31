@@ -1,0 +1,70 @@
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+        <h1>Lijst van ingredienten</h1>
+            <h:dataTable styleClass="table table-striped table-dark" id="table1" value="#{ingredientController.ingredients}" var="user">
+                <h:column id="column1">
+                <h:form>
+                    <h:commandLink styleClass="btn btn-danger" action="${ingredientController.showList()}">
+                        <span class="glyphicon glyphicon-remove"/> Search recipe
+                    </h:commandLink>
+                </h:form>
+                </h:column>
+                <h:column id="column2">
+                    <h:outputText id="column1text" value="#{user.naam}"/>
+                </h:column>
+            </h:dataTable>
+
+
+</h:body>
+</html>
+<!--
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Supercook</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</h:head>
+<h:body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Supercook</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Lieven </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h:form>
+            <h3 style="margin-top:0px">Ingredients</h3>
+
+            <p:selectManyCheckbox id="grid" value="#{ingredientController.ingredients}" layout="grid" columns="3">
+                <f:selectItems value="#{checkboxView.cities}" var="city" itemLabel="#{city}" itemValue="#{city}" />
+            </p:selectManyCheckbox>
+
+        </h:form>
+    </div>
+</h:body>
+</html>-->
